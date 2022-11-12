@@ -1,7 +1,5 @@
 <html>
     <style>
-        
-          
           body {
             margin: 40px 0px;
             background-color: #ffffffd2;
@@ -898,8 +896,23 @@
             margin: 0 auto;
           }
           /* Footer finished */
-          
     </style>
+    <script>
+      const x = document.getElementById("demo");
+      
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.watchPosition(showPosition);
+        } else { 
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+          
+      function showPosition(position) {
+          x.innerHTML="Latitude: " + position.coords.latitude + 
+          "<br>Longitude: " + position.coords.longitude;
+      }
+      </script> 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
         <header>
@@ -934,7 +947,7 @@
         </header>
         <div id="profile-upper">
           <div id="profile-banner-image">
-            <img src="https://imagizer.imageshack.com/img921/9628/VIaL8H.jpg" alt="Banner image">
+        <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/185188120/original/b084c38d746e1cc36e133e7557c06c4e47a45198/create-responsive-websites-using-html-css-javascript-react.jpeg" alt="Banner image">
           </div>
           <div id="profile-d">
             <div id="profile-pic">
@@ -965,7 +978,7 @@
                 <div id="i-box">
                   <div id="intro-line">Front-end Engineer</div>
                   <div id="u-occ">I love making applications with Angular.</div>
-                  <div id="u-loc"><i class="material-icons">location_on</i><a href="#">Bengaluru</a>, <a href="#">India</a></div>
+                  <div id="u-loc" onclick = "getLocation()" ><i class="material-icons">location_on</i><a href="#">Bengaluru</a>, <a href="#">India</a></div>
                 </div>
               </div>
               <div class="l-cnt l-mrg">
@@ -1002,9 +1015,9 @@
                 <div>
                   <div class="q-ad-c">
                     <a href="#" class="q-ad">
-                      <span>What is the error code 404?<i id="k-nm"></i></span>
-                      <span><br>Answers<i id="k-nm">1</i></span>
-        
+                    <span>What is the error code 404?<i id="k-nm"></i></span>
+                    <br><span>What are Attributes in HTML??<i id="k-nm"></i></span>
+                    <br><span>What is an Anchor tag in HTML?<i id="k-nm"></i></span>
                     </a>
                   </div>
                   <div class="q-ad-c">
@@ -1017,7 +1030,7 @@
               </div>
               <div id="t-box">
                 <a href="#">Privacy</a> <a href="#">Terms</a> <a href="#">Advertising</a> <a href="#">Ad Choices</a> <a href="#">Cookies</a> <span id="t-more">More<i class="material-icons">arrow_drop_down</i></span>
-                <div id="cpy-nt">Facebook &copy; <span id="curr-year"></span></div>
+                <div id="cpy-nt"> &copy; <span id="curr-year"></span></div>
               </div>
             </div>
             <div class="td" id="m-col">
@@ -1042,6 +1055,7 @@
                     <div class="td"><i class="material-icons">camera_enhance</i><span>Photo/Video</span></div>
                     <div class="td"><i class="material-icons">videocam</i><span>Live Video</span></div>
                     <div class="td"><i class="material-icons">event</i><span>Life Event</span></div>
+                    <div class="td" onclick = "getLocation()"><i class="material-icons">explore</i><span>Add Location</span></div>
                   </div>
                 </div>
                 <div id="c-c-main">
@@ -1069,9 +1083,14 @@
                     </div>
                     <div class="td p-opt"><i class="material-icons">keyboard_arrow_down</i></div>
                   </div>
-                  <a href="#" class="p-cnt-v">
-                    <img src="https://html.com/wp-content/uploads/html-hpg-sublime.png">
-                  </a>
+                  <div>
+                    <video width="700" height="450" controls="controls" poster="image" preload="true">
+                      <source src="Blue.mp4" type="video/mov"/>
+                      <source src="Blue.mp4" type="video/mp4" />
+                      <source src="Blue.mp4" type="video/oog" />
+                      Your browser does not support the video tag.
+                    </video>
+                 </div>
                   <div>
                     <div class="p-acts">
                       <div class="p-act like"><i class="material-icons">thumb_up_alt</i><span>25</span></div>
