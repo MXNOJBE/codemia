@@ -1,8 +1,11 @@
-<html>
+
+<html ng-app="myApp">
     <head>
       <title>CODEMI-profile page</title>
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="profile2.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
     </head>
     <body>
       <header>
@@ -70,69 +73,17 @@
                 <div id="u-occ">I love making applications with Angular.</div>
                 <div id="u-loc" onclick = "getLocation()" ><i class="material-icons">location_on</i><a href="#">Bengaluru</a>, <a href="#">India</a></div>
               </div>
-            </div>
-            <div class="l-cnt l-mrg">
-              <div class="cnt-label">
-                <i class="l-i" id="l-i-p"></i>
-                <span>Repositories</span>
-                <div class="lb-action" id="b-i"><i class="material-icons"></i></div>
-              </div>
-              <div id="Repositories">
-                <div class="tb">
-                  <div class="tr">
-                    <div class="td"></div>
-                    <div class="td"></div>
-                    <div class="td"></div>
-                  </div>
-                  <div class="tr">
-                    <div class="td"></div>
-                    <div class="td"></div>
-                    <div class="td"></div>
-                  </div>
-                  <div class="tr">
-                    <div class="td"></div>
-                    <div class="td"></div>
-                    <div class="td"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="l-cnt l-mrg">
-              <div class="cnt-label">
-                <i class="l-i" id="l-i-k"></i>
-                <span>Questions<i id="k-nm">1</i></span>
-              </div>
-              <div>
-                <div class="q-ad-c">
-                  <a href="#" class="q-ad">
-                  <span>What is the error code 404?<i id="k-nm"></i></span>
-                  <br><span>What are Attributes in HTML??<i id="k-nm"></i></span>
-                  <br><span>What is an Anchor tag in HTML?<i id="k-nm"></i></span>
-                  </a>
-                </div>
-                <div class="q-ad-c">
-                  <a href="#" class="q-ad" id="add_q">
-                    <i class="material-icons">add</i>
-                    <span>Add Answer</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div id="t-box">
-              <a href="#">Privacy</a> <a href="#">Terms</a> <a href="#">Advertising</a> <a href="#">Ad Choices</a> <a href="#">Cookies</a> <span id="t-more">More<i class="material-icons">arrow_drop_down</i></span>
-              <div id="cpy-nt"> &copy; <span id="curr-year"></span></div>
-            </div>
-          </div>
+            </div>  
           <div class="td" id="m-col">
             <div class="page_options" id="p-tabs">
               <div class="tb">
                 <div class="td">
                   <div class="tb" id="p-tabs-m">
-                    <div class="td active"><i class="material-icons">av_timer</i><span>TIMELINE</span></div>
-                    <div class="td"><i class="material-icons">people</i><span>FRIENDS</span></div>
-                    <div class="td"><i class="material-icons">photo</i><span>PHOTOS</span></div>
-                    <div class="td"><i class="material-icons">explore</i><span>ABOUT</span></div>
-                    <div class="td"><i class="material-icons">archive</i><span>ARCHIVE</span></div>
+                    <div class="td active"><i class="material-icons">av_timer</i><a href="#/"></a><span>TIMELINE</span></div>
+                    <div class="td"><i class="material-icons">people</i><a href="/friendspage.html"><span>FRIENDS</span></a></div>
+                    <div class="td"><i class="material-icons">photo</i><a href="/photopage.html"><span>PHOTOS</span></a></div>
+                    <div class="td"><i class="material-icons">explore</i><a href="/aboutpage.html"><span>ABOUT</span></a></div>
+                    <div class="td"><i class="material-icons">archive</i><a href="/"><span>ARCHIVE</span></a></div>
                   </div>
                 </div>
                 <div class="td" id="p-tab-m"><i class="material-icons">keyboard_arrow_down</i></div>
@@ -190,91 +141,7 @@
                 </div>
               </div>
             </div>
-            <div>
-              <div class="post">
-                <div class="tb">
-                  <a href="#" class="td p-p-pic"><img src="https://img.icons8.com/office/512/person-male.png" alt="User's profile pic"></a>
-                  <div class="td p-r-hdr">
-                    <div class="p-u-info">
-                      <a href="#">User</a> Posted this <a href="#"></a>
-                    </div>
-                    <div class="p-dt">
-                      <i class="material-icons">calendar_today</i>
-                      <span>November 13, 2022</span>
-                    </div>
-                  </div>
-                  <div class="td p-opt"><i class="material-icons">keyboard_arrow_down</i></div>
-                </div>
-                <div>
-                  <canvas id="myCanvas" width="750" height="450">
-                    Your browser does not support the HTML canvas tag.</canvas>
-               </div>
-                <div>
-                  <div class="p-acts">
-                    <div class="p-act like"><i class="material-icons">thumb_up_alt</i><span>25</span></div>
-                    <div class="p-act comment"><i class="material-icons">comment</i><span>1</span></div>
-                    <div class="p-act share"><i class="material-icons">reply</i></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="post">
-              <div class="tb">
-                <a href="#" class="td p-p-pic"><img src="https://img.icons8.com/office/512/person-male.png" alt="User's profile pic"></a>
-                <div class="td p-r-hdr">
-                  <div class="p-u-info">
-                    <a href="#">User</a> Posted this <a href="#"></a>
-                  </div>
-                  <div class="p-dt">
-                    <i class="material-icons">calendar_today</i>
-                    <span>November 13, 2022</span>
-                  </div>
-                </div>
-                <div class="td p-opt"><i class="material-icons">keyboard_arrow_down</i></div>
-              </div>
-              <div>
-                <br>
-                <span> AUDIO SONG POST</span>
-                <br>
-                <br>
-                
-                <audio width="980" controls >
-                  <source src="./assets/song.mp3" type="audio/mp3">
-                  Your browser does not support the audio tag.
-              </audio>
-             </div>
-              <div>
-                <div class="p-acts">
-                  <div class="p-act like"><i class="material-icons">thumb_up_alt</i><span>25</span></div>
-                  <div class="p-act comment"><i class="material-icons">comment</i><span>1</span></div>
-                  <div class="p-act share"><i class="material-icons">reply</i></div>
-                </div>
-              </div>
-            </div>
-          </div
-            <div id="loading"><i class="material-icons">autorenew</i></div>
-          </div>
+            <div>        
     </main>
     </body> 
-    <script>
-        const x = document.getElementById("demo");
-        
-        function getLocation() {
-          if (navigator.geolocation) {
-            navigator.geolocation.watchPosition(showPosition);
-          } else { 
-            x.innerHTML = "Geolocation is not supported by this browser.";
-          }
-        }
-            
-        function showPosition(position) {
-            x.innerHTML="Latitude: " + position.coords.latitude + 
-            "<br>Longitude: " + position.coords.longitude;  
-        }
-        
-        var c = document.getElementById("myCanvas");
-              var ctx = c.getContext("2d");
-              ctx.font = "25px Poppins";
-              ctx.fillText("This is a Canvas Text",10,50);
-    </script> 
 </html>
